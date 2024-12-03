@@ -1,5 +1,6 @@
 .resume{
     height: 100%;
+    padding-bottom: 60px;
 }
 
 .timeline{
@@ -87,11 +88,16 @@
 }
 
 @media only screen and (max-width : 768px){
+    .resume{
+        padding-bottom: 80px;
+    }
     .timeline{
         flex-direction: column;
+        margin-bottom: 20px;
         &__experience, &__education{
             width: 100%;
             gap: 2rem;
+            padding-bottom: 20px;
         }
     }
 }
