@@ -50,7 +50,7 @@
   
   .social-item span {
     font-size: 2.3rem;
-    color: var(--default-text-main-color);
+    color: var(--blue-text-main-color);
     opacity: 0;
     transform: translateY(-10px);
     transition: all 0.3s ease;

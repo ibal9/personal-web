@@ -1,4 +1,5 @@
 import './styles.scss';
+import PropTypes from 'prop-types';
 
 const PageHeaderContent = (props) => {
   const { headerText, icon } = props;
@@ -9,6 +10,11 @@ const PageHeaderContent = (props) => {
       <span>{icon}</span>
     </div>
   );
+};
+
+PageHeaderContent.propTypes = {
+  headerText: PropTypes.string.isRequired,
+  icon: PropTypes.element.isRequired
 };
 
 

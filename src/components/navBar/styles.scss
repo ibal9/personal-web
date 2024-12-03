@@ -1,11 +1,11 @@
 .navbar{
-    background-color: #1d1d1d;
+    background-color: var(--blue-theme-nav-background-color);
     height: 80px;
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.2rem;
-    position: sticky;
+    position: relative;
 
     &__container{
         display: flex;
@@ -20,7 +20,7 @@
             cursor: pointer;
         }
 
-        &__menu {
+        &__menu{
             display: flex;
             list-style: none;
             text-align: center;
@@ -60,6 +60,27 @@
 
 @media only screen and (max-width : 768px){
     .navbar__container__menu{
+        &__links {
+            position: relative;
+        }
+        
+        &::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--blue-theme-main-color);
+            transition: width 0.3s ease-in-out;
+        }
+
+        &:hover::after,
+        &.active::after {
+            width: 100%;
+        }
+    
+
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -69,6 +90,8 @@
         left: -110%;
         opacity: 1;
         transition: all 0.5s ease;
+        z-index: 9999;
+        background: #181818;
 
         &.active{
             background: #181818;
