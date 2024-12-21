@@ -1,7 +1,9 @@
 .footer-container {
     position: relative;
+    width: 100%;
     padding: 2rem 0;
     z-index: 1;
+    margin-top: 20px;
   }
   
   .footer-container.home {
