@@ -1,6 +1,6 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
-import { FaInstagram,FaLinkedin, FaGithub, FaSpotify, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
+import { FaInstagram,FaLinkedin, FaGithub, FaEnvelope, FaWhatsapp } from 'react-icons/fa';
 import './Footer.css';
 
 const Footer = () => {
@@ -45,16 +45,7 @@ const Footer = () => {
             <FaGithub />
             <span>GitHub</span>
           </a>
-          <a
-            href="https://open.spotify.com/user/313egavpkq7rd7chbtf2ybphp2ie?si=0em_r779QjSKrdEaiOIGkg"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="social-item spotify"
-            aria-label="Spotify"
-          >
-            <FaSpotify />
-            <span>Spotify</span>
-          </a>
+         
           <a
             href="mailto:muhhammadiqbal0909@gmail.com"
             className="social-item email"

@@ -53,9 +53,6 @@
       .social-item.github svg {
         color: #333333;
       }
-      .social-item.spotify svg {
-        color: #1DB954;
-      }
       .social-item.email svg {
         color: #EA4335;
       }
@@ -103,16 +100,35 @@
         .footer-social {
           gap: 1rem;
         }
-  
+      
         .social-item svg {
           font-size: 2rem;
         }
-
+      
         .footer-text p {
           font-size: 1.6rem;
         }
-
+      
         .copyright {
           font-size: 0.9rem;
         }
+      
+        .social-item span {
+          font-size: 1.8rem;
+        }
       }
+      
+      @media (max-width: 480px) {
+        .footer-social {
+          gap: 0.8rem;
+        }
+      
+        .social-item svg {
+          font-size: 1.8rem;
+        }
+      
+        .social-item span {
+          font-size: 1.5rem;
+        }
+      }
+      
