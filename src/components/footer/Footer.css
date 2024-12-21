@@ -35,62 +35,84 @@
     transition: all 0.3s ease;
     padding: 0.5rem;
   }
+      .social-item svg {
+        font-size: 2.5rem;
+        margin-bottom: 0.5rem;
+        fill: currentColor;
+        transition: color 0.5s ease;
+         /* Menggunakan warna tema utama */
+      }
   
-  .social-item svg {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
-    fill: currentColor;
-    transition: color 0.5s ease;
-  }
+      /* Hapus warna individual dan gunakan warna konsisten */
+      .social-item.instagram svg {
+        color: #E1306C;
+      }
+      .social-item.linkedin svg {
+        color: #0077B5;
+      }
+      .social-item.github svg {
+        color: #333333;
+      }
+      .social-item.spotify svg {
+        color: #1DB954;
+      }
+      .social-item.email svg {
+        color: #EA4335;
+      }
+      .social-item.whatsapp svg {
+        color: #25d366;
+      }
   
+      .social-item span {
+        font-size: 2.3rem;
+        color: #ffffff;
+        opacity: 0;
+        transform: translateY(-10px);
+        transition: all 0.3s ease;
+      }
   
+      .social-item:hover {
+        transform: translateY(-5px);
+      }
+
+      .social-item:hover svg {
+        color: #00ff88;
+      }
   
-  .social-item.instagram svg { color: #E1306C; }
-  .social-item.github svg { color: #333; }
-  .social-item.spotify svg { color: #1DB954; }
-  .social-item.email  svg { color: #EA4335; }
-  .social-item.whatsapp svg { color: #25D366; }
+      .social-item:hover span {
+        opacity: 1;
+        transform: translateY(0);
+      }
   
+      .footer-text {
+        text-align: center;
+        color: #ffffff;
+      }
   
-  .social-item span {
-    font-size: 2.3rem;
-    color: var(--blue-text-main-color);
-    opacity: 0;
-    transform: translateY(-10px);
-    transition: all 0.3s ease;
-  }
+      .footer-text p {
+        font-size: 2rem;
+        margin: 1.5rem 0;
+      }
   
-  .social-item:hover {
-    transform: translateY(-5px);
-    color: #00ff88;
-  }
+      .copyright {
+        font-size: 1rem;
+        opacity: 0.7;
+      }
   
-  .social-item:hover span {
-    opacity: 1;
-    transform: translateY(0);
-  }
+      @media (max-width: 768px) {
+        .footer-social {
+          gap: 1rem;
+        }
   
-  .footer-text {
-    text-align: center;
-    color: #ffffff;
-  }
-  
-  .footer-text p {
-    font-size: 2rem;
-    margin: 1.5rem 0;
-  }
-  
-  .copyright {
-    font-size: 1rem;
-    opacity: 0.7;
-  }
-  
-  @media (max-width: 768px) {
-    .footer-social {
-      gap: 1.5rem;
-    }
-  
-    .social-item svg {
-      font-size: 1.5rem;
-    }
-  }
+        .social-item svg {
+          font-size: 2rem;
+        }
+
+        .footer-text p {
+          font-size: 1.6rem;
+        }
+
+        .copyright {
+          font-size: 0.9rem;
+        }
+      }

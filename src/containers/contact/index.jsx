@@ -6,6 +6,8 @@ import "./styles.scss";
 import emailjs from '@emailjs/browser';
 import { useRef, useState } from 'react';
 
+emailjs.init('L3V_dKZr4DIWwEEVM')
+
 const Contact = () => {
   const form = useRef();
   const [loading, setLoading] = useState(false);
@@ -16,7 +18,7 @@ const Contact = () => {
 
     emailjs.sendForm(
       'service_3i0z3rs', 
-      'template_bgvvjxc', 
+      'template_hygdv4s', 
       form.current, 
       'L3V_dKZr4DIWwEEVM'
     )
@@ -26,7 +28,7 @@ const Contact = () => {
     })
     .catch((error) => {
       alert('Gagal mengirim pesan');
-      console.log(error);
+      console.log('Error detail', error);
     })
     .finally(() => {
       setLoading(false);
